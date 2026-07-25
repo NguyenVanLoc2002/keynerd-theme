@@ -2209,25 +2209,17 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
   .sticky-content {
     margin-top: calc(var(--header-height) * var(--transparent-header-offset-boolean) * -1);
   }
-     /* Product title ellipsis truncation */
-  .card__heading a,
-  .card__heading {
+  
+  /* KeyNerd: clamp product card titles to two lines on product grids/cards. */
+  .resource-card[data-resource-type="product"] .resource-card__title,
+  :is(.product-card, .product-grid__card) :is(h4, .h4, .product-title, [class*="product_title"] .text-block) {
     display: -webkit-box;
-    -webkit-line-clamp: 2;       /* show max 2 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: normal !important;         /* override the nowrap */
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
 
 }
-/* KeyNerd: clamp product card titles to two lines on product grids/cards. */
-.resource-card[data-resource-type="product"] .resource-card__title,
-:is(.product-card, .product-grid__card) :is(h4, .h4, .product-title, [class*="product_title"] .text-block) {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-}
+
