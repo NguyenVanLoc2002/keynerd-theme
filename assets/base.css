@@ -2218,7 +2218,7 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: normal;         /* override the nowrap */
+    white-space: normal !important;         /* override the nowrap */
   }
 
 }
