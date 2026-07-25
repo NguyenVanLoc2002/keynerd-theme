@@ -510,7 +510,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Productivity Essentials</h2>",
+                "text": "<p>Handcrafted Collectibles, Made for You</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -535,7 +535,7 @@
             "text_jxGhdJ": {
               "type": "text",
               "settings": {
-                "text": "<p>Objects that partner with your digital tools so you can focus on your most important work.</p>",
+                "text": "<p>Discover artisan keycaps, personalized gifts, and unique accessories designed to bring more personality to your desk and collection.</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
