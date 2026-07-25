@@ -64,7 +64,8 @@
       {% endfor %}
     {% elsif linklists['homepage-collections'].links != blank %}
       {% for link in linklists['homepage-collections'].links limit: max_items %}
-        {% assign collection = link.object %}
+        {% assign collection_handle = link.url | split: '/collections/' | last | split: '?' | first %}
+        {% assign collection = collections[collection_handle] %}
         <div class="resource-list__item">
           {% content_for 'block', type: '_collection-card', id: 'static-collection-card', closest.collection: collection %}
         </div>
