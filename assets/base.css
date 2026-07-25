@@ -2221,5 +2221,15 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
     line-clamp: 2;
   }
 
+  .product-title-clamp {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-word;
+  }
 }
 
