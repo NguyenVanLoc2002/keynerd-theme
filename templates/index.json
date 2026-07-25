@@ -741,10 +741,10 @@
                                                                      "padding-block-start":  48,
                                                                      "padding-block-end":  64,
                                                                      "collection_list":  [
-                                                                                             "shopify://collections/artisan-keycaps",
-                                                                                             "shopify://collections/pokemon-inspired-keycaps",
-                                                                                             "shopify://collections/personalized-gifts",
-                                                                                             "shopify://collections/supplies-accessories"
+                                                                                             "gid://shopify/Collection/519499186456",
+                                                                                             "gid://shopify/Collection/519499219224",
+                                                                                             "gid://shopify/Collection/519499350296",
+                                                                                             "gid://shopify/Collection/519499481368"
                                                                                          ]
                                                                  }
                                                 }
