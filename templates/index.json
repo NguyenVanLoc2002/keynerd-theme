@@ -717,15 +717,15 @@
               "static": true,
               "settings": {
                 "image_ratio": "portrait",
-                "toggle_overlay": false,
+                "toggle_overlay": true,
                 "overlay_color": "#00000026",
-                "overlay_style": "solid",
+                "overlay_style": "gradient",
                 "gradient_direction": "to top",
-                "border": "none",
+                "border": "solid",
                 "border_width": 1,
                 "border_opacity": 100,
                 "border_color": "",
-                "border_radius": 0
+                "border_radius": 24
               },
               "blocks": {}
             }
