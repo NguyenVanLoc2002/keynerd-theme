@@ -73,6 +73,17 @@
           <!--@list/split-->
         {% endunless %}
       {% endfor %}
+    {% else %}
+      {% assign fallback_collection_handles = 'artisan-keycaps,pokemon-inspired-keycaps,personalized-gifts,supplies-accessories' | split: ',' %}
+      {% for collection_handle in fallback_collection_handles limit: max_items %}
+        {% assign collection = collections[collection_handle] %}
+        <div class="resource-list__item">
+          {% content_for 'block', type: '_collection-card', id: 'static-collection-card', closest.collection: collection %}
+        </div>
+        {% unless forloop.last %}
+          <!--@list/split-->
+        {% endunless %}
+      {% endfor %}
     {% endif %}
   {% endcapture %}
 
