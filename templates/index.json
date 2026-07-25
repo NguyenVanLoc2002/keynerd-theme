@@ -740,7 +740,14 @@
       ],
       "name": "t:names.collection_list",
       "settings": {
-        "collection_list": [],
+        "collection_list": [
+          "artisan-keycaps",
+          "personalized-gifts",
+          "custom-figurines",
+          "custom-bobbleheads",
+          "keycap-sets",
+          "anime-inspired-keycaps"
+        ],
         "layout_type": "bento",
         "carousel_on_mobile": true,
         "columns": 4,
