@@ -44,7 +44,7 @@
     {%- content_for 'blocks' -%}
   </div>
 
-  {% if section_collections == null and linklists['homepage-collections'].links == blank %}
+  {% if false and section_collections == null %}
     {% for i in (1..max_items) %}
       {% assign section_collections = section_collections | append: ', ' %}
     {% endfor %}
