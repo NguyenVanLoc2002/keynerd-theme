@@ -3,19 +3,44 @@
 {% if closest.product == blank %}
   {% assign text = 'placeholders.product_title' | t %}
   {% assign product_title = '<p class="product-title-clamp" role="heading" aria-level="3">' | append: text | append: '</p>' %}
+
   {% render 'text', fallback_text: product_title, block: block %}
 {% else %}
-  {% assign product_title = '<p class="product-title-clamp" role="heading" aria-level="3" title="' | append: closest.product.title | append: '">' | append: closest.product.title | append: '</p>' %}
+  {% assign escaped_title = closest.product.title | escape %}
+
+  {% assign product_title = '<p class="product-title-clamp" role="heading" aria-level="3" title="' %}
+  {% assign product_title = product_title | append: escaped_title %}
+  {% assign product_title = product_title | append: '">' %}
+  {% assign product_title = product_title | append: escaped_title %}
+  {% assign product_title = product_title | append: '</p>' %}
 
   <a
     class="contents user-select-text"
     ref="productTitleLink"
     href="{{ closest.product.url }}"
-    aria-label="{{ closest.product.title | escape }}"
+    aria-label="{{ escaped_title }}"
   >
     {% render 'text', fallback_text: product_title, block: block %}
   </a>
 {% endif %}
+
+{% stylesheet %}
+  .product-title-clamp {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+
+    line-height: 1.4;
+    min-height: 2.8em;
+    max-height: 2.8em;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-overflow: ellipsis;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
