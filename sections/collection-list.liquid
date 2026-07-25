@@ -44,7 +44,7 @@
     {%- content_for 'blocks' -%}
   </div>
 
-  {% if section_collections == null %}
+  {% if section_collections == null and linklists['homepage-collections'].links == blank %}
     {% for i in (1..max_items) %}
       {% assign section_collections = section_collections | append: ', ' %}
     {% endfor %}
@@ -53,14 +53,26 @@
   {% endif %}
 
   {% capture list_items %}
-    {% for collection in section_collections limit: max_items %}
-      <div class="resource-list__item">
-        {% content_for 'block', type: '_collection-card', id: 'static-collection-card', closest.collection: collection %}
-      </div>
-      {% unless forloop.last %}
-        <!--@list/split-->
-      {% endunless %}
-    {% endfor %}
+    {% if section_collections != blank %}
+      {% for collection in section_collections limit: max_items %}
+        <div class="resource-list__item">
+          {% content_for 'block', type: '_collection-card', id: 'static-collection-card', closest.collection: collection %}
+        </div>
+        {% unless forloop.last %}
+          <!--@list/split-->
+        {% endunless %}
+      {% endfor %}
+    {% elsif linklists['homepage-collections'].links != blank %}
+      {% for link in linklists['homepage-collections'].links limit: max_items %}
+        {% assign collection = link.object %}
+        <div class="resource-list__item">
+          {% content_for 'block', type: '_collection-card', id: 'static-collection-card', closest.collection: collection %}
+        </div>
+        {% unless forloop.last %}
+          <!--@list/split-->
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
   {% endcapture %}
 
   {% liquid
