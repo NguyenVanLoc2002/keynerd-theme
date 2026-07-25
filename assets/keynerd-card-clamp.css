@@ -1,0 +1,9 @@
+.resource-card[data-resource-type="product"] .resource-card__title,
+:is(.product-card, .product-grid__card) :is(h4, .h4, .product-title, [class*="product_title"] .text-block) {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  -webkit-line-clamp: 2 !important;
+  line-clamp: 2 !important;
+}
