@@ -2222,3 +2222,13 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
   }
 
 }
+/* KeyNerd: clamp product card titles to two lines on product grids/cards. */
+.resource-card[data-resource-type="product"] .resource-card__title,
+:is(.product-card, .product-grid__card) :is(h4, .h4, .product-title, [class*="product_title"] .text-block) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
