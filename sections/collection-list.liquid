@@ -44,7 +44,7 @@
     {%- content_for 'blocks' -%}
   </div>
 
-  {% if false and section_collections == null %}
+  {% if section_collections == null %}
     {% for i in (1..max_items) %}
       {% assign section_collections = section_collections | append: ', ' %}
     {% endfor %}
@@ -53,46 +53,14 @@
   {% endif %}
 
   {% capture list_items %}
-    {% if false and section_collections.count > 0 %}
-      {% for collection in section_collections limit: max_items %}
-        <div class="resource-list__item">
-          {% content_for 'block', type: '_collection-card', id: 'static-collection-card', closest.collection: collection %}
-        </div>
-        {% unless forloop.last %}
-          <!--@list/split-->
-        {% endunless %}
-      {% endfor %}
-    {% elsif false and linklists['homepage-collections'].links != blank %}
-      {% for link in linklists['homepage-collections'].links limit: max_items %}
-        {% assign collection_handle = link.url | split: '/collections/' | last | split: '?' | first %}
-        {% assign collection = collections[collection_handle] %}
-        <div class="resource-list__item">
-          {% content_for 'block', type: '_collection-card', id: 'static-collection-card', closest.collection: collection %}
-        </div>
-        {% unless forloop.last %}
-          <!--@list/split-->
-        {% endunless %}
-      {% endfor %}
-    {% else %}
-      {% assign fallback_collection_cards = 'Artisan Keycaps|/collections/artisan-keycaps,Pokemon-Inspired Keycaps|/collections/pokemon-inspired-keycaps,Personalized Gifts|/collections/personalized-gifts,Supplies & Accessories|/collections/supplies-accessories' | split: ',' %}
-      {% for fallback_card in fallback_collection_cards limit: max_items %}
-        {% assign fallback_parts = fallback_card | split: '|' %}
-        <div class="resource-list__item">
-          <a class="collection-card border-style collection-card--image-bg collection-card--image-height-fixed" href="{{ fallback_parts[1] }}" style="--border-width: 1px; --border-style: none; --border-radius: 10px; overflow: hidden; --horizontal-alignment: flex-start; --vertical-alignment: flex-start; --gap: 8px;">
-            <div class="collection-card__inner" style="min-height: 100%; background: linear-gradient(135deg, rgb(var(--color-foreground-rgb) / 0.08), rgb(var(--color-foreground-rgb) / 0.02)); display: flex; align-items: flex-end; padding: 1rem; aspect-ratio: 4 / 5;">
-              <div class="collection-card__content layout-panel-flex--column">
-                <div class="spacing-style text-block h5" style="--color: #000000; --width: fit-content;">
-                  <p>{{ fallback_parts[0] }}</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        {% unless forloop.last %}
-          <!--@list/split-->
-        {% endunless %}
-      {% endfor %}
-    {% endif %}
+    {% for collection in section_collections limit: max_items %}
+      <div class="resource-list__item">
+        {% content_for 'block', type: '_collection-card', id: 'static-collection-card', closest.collection: collection %}
+      </div>
+      {% unless forloop.last %}
+        <!--@list/split-->
+      {% endunless %}
+    {% endfor %}
   {% endcapture %}
 
   {% liquid
