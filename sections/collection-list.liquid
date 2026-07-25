@@ -62,7 +62,7 @@
           <!--@list/split-->
         {% endunless %}
       {% endfor %}
-    {% elsif linklists['homepage-collections'].links != blank %}
+    {% elsif false and linklists['homepage-collections'].links != blank %}
       {% for link in linklists['homepage-collections'].links limit: max_items %}
         {% assign collection_handle = link.url | split: '/collections/' | last | split: '?' | first %}
         {% assign collection = collections[collection_handle] %}
