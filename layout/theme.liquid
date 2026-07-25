@@ -47,6 +47,17 @@
     {% endif %}
 
     {{ content_for_header }}
+    <style id="keynerd-product-card-title-clamp">
+      .resource-card[data-resource-type="product"] .resource-card__title,
+      :is(.product-card, .product-grid__card) :is(h4, .h4, .product-title, [class*="product_title"] .text-block) {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+      }
+    </style>
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
