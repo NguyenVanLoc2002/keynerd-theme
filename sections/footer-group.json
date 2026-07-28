@@ -34,7 +34,7 @@
           "settings": {
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 100
+            "gap": 70
           },
           "blocks": {
             "text_tPnNpR": {
