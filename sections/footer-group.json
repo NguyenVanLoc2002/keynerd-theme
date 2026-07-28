@@ -161,7 +161,7 @@
               "type": "social-links",
               "name": "t:names.social_media_links",
               "settings": {
-                "icon_color": "#EC0909",
+                "icon_color": "{{ settings.color_palette.foreground }}",
                 "facebook_url": "https://facebook.com",
                 "instagram_url": "https://instagram.com",
                 "youtube_url": "",
