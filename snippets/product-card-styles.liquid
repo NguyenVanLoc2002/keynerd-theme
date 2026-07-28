@@ -52,6 +52,29 @@
     -webkit-line-clamp: 2;
     line-clamp: 2;
   }
+
+  .section-resource-list .product-card {
+    transition: transform 180ms var(--animation-easing);
+  }
+
+  .section-resource-list .product-card:has(.product-card__link:focus-visible),
+  .section-resource-list .product-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .section-resource-list .product-card__link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  .section-resource-list .product-card .product-media-container {
+    transition: transform 220ms var(--animation-easing);
+  }
+
+  .section-resource-list .product-card:hover .product-media-container {
+    transform: scale(1.025);
+  }
+
   .product-card__placeholder-image svg {
     height: 100%;
   }

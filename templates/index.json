@@ -65,7 +65,7 @@
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 0,
                 "width": "custom",
-                "custom_width": 100,
+                "custom_width": 72,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
@@ -96,7 +96,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2><em>Premium Quality</em></h2>",
+                    "text": "<h2><em>Handmade keycaps, figures, and desk collectibles</em></h2>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -121,7 +121,7 @@
                 "text_m9AcWC": {
                   "type": "text",
                   "settings": {
-                    "text": "<h1>Keycap Collection</h1>",
+                    "text": "<h1>Artisan Keycaps & Personalized 3D Collectibles</h1>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -153,7 +153,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Discover handcrafted keycaps and personalized 3D-printed figurines designed to elevate your workspace. Each piece is meticulously created with premium materials and artistic attention to detail, bringing unique character and quality to your collection.</p>",
+                "text": "<p>Detailed keycaps, desk figures, and custom gifts made for mechanical keyboard setups and collectors.</p>",
                 "width": "fit-content",
                 "max_width": "none",
                 "alignment": "left",
@@ -174,11 +174,30 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "button_keynerd_shop": {
+              "type": "button",
+              "settings": {
+                "label": "Browse the Collection",
+                "link": "shopify://collections/all",
+                "open_in_new_tab": false,
+                "style_class": "button-secondary",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "group_U86Qji",
-            "text_ebNxhf"
+            "text_ebNxhf",
+            "button_keynerd_shop"
           ]
         }
       },
@@ -209,13 +228,13 @@
         "section_height_custom": 50,
         "background_color": "{{ settings.color_palette.foreground }}",
         "toggle_overlay": true,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
+        "overlay_color": "#00000059",
+        "overlay_style": "gradient",
         "gradient_direction": "to top",
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 0,
-        "padding-block-end": 31
+        "padding-block-end": 40
       }
     },
     "product_list_EDUBdR": {
@@ -510,7 +529,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<p>Handcrafted Collectibles, Made for You</p>",
+                "text": "<p>Small pieces, made to be noticed</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -535,7 +554,7 @@
             "text_jxGhdJ": {
               "type": "text",
               "settings": {
-                "text": "<p>Discover artisan keycaps, personalized gifts, and unique accessories designed to bring more personality to your desk and collection.</p>",
+                "text": "<p>From sculpted resin keycaps to personalized 3D-printed figures, each piece is chosen for detail, character, and display value.</p>",
                 "width": "fit-content",
                 "max_width": "narrow",
                 "alignment": "left",
@@ -560,7 +579,7 @@
             "button_zg4nUF": {
               "type": "button",
               "settings": {
-                "label": "Shop Now",
+                "label": "Explore All Pieces",
                 "link": "shopify://collections/all",
                 "open_in_new_tab": false,
                 "style_class": "button-secondary",
@@ -592,8 +611,8 @@
         "section_width": "page-width",
         "extend_media": true,
         "background_color": "{{ settings.color_palette.color3 }}",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-start": 8,
+        "padding-block-end": 8
       }
     },
     "product_list_neYaGa": {
@@ -881,7 +900,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h2>Shop by Collection</h2>",
+                "text": "<h2>Explore Keycaps & 3D Gifts</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -993,22 +1012,22 @@
         "columns_gap": 16,
         "bento_gap": 12,
         "rows_gap": 16,
-        "max_collections": 4,
+        "max_collections": 5,
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
         "gap": 12,
         "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 48,
-        "padding-block-end": 64
+        "padding-block-start": 40,
+        "padding-block-end": 56
       }
     }
   },
   "order": [
     "hero_iLBwPd",
+    "collection_list_xpBxCm",
     "product_list_EDUBdR",
     "media_with_content_LfPdEJ",
-    "product_list_neYaGa",
-    "collection_list_xpBxCm"
+    "product_list_neYaGa"
   ]
 }
