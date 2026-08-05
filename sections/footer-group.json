@@ -160,8 +160,8 @@
                   "name": "t:names.social_media_links",
                   "settings": {
                     "icon_color": "{{ settings.color_palette.foreground }}",
-                    "facebook_url": "https://www.facebook.com/Cristiano/",
-                    "instagram_url": "https://www.instagram.com/cristiano/",
+                    "facebook_url": "https://www.facebook.com/profile.php?id=61585087554470",
+                    "instagram_url": "https://www.instagram.com/keynerd_artisankeycap/",
                     "youtube_url": "",
                     "tiktok_url": "",
                     "twitter_url": "",
