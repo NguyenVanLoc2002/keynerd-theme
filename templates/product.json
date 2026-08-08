@@ -391,7 +391,7 @@
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "text": "<p>Made with care</p>",
+                            "text": "<p>Crafted with Care</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "center",
@@ -475,7 +475,7 @@
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "text": "<p>Great value</p>",
+                            "text": "<p>Unique & Custom</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "center",
@@ -605,7 +605,7 @@
                           "type": "text",
                           "name": "t:names.heading",
                           "settings": {
-                            "text": "<p>Elegant design</p>",
+                            "text": "<p>Precision Crafted</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "center",
